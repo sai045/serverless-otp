@@ -9,7 +9,7 @@ def lambda_handler(event,context):
         MailID = event['Records'][0]['dynamodb']['Keys']['MailID']['S']
         OTP = event['Records'][0]['dynamodb']['NewImage']['otp']['N']
         sender = "saivarshith3041@gmail.com"
-        password = 'uerufsxiwffnuhrq'
+        password = ''
     
         Subject = "OTP for server"
         body = "OTP: {}".format(OTP)
