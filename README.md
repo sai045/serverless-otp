@@ -1,7 +1,7 @@
 ﻿# Serverless-otp
  
  ## Plan of the project
-![Serverless-OTP](https://user-images.githubusercontent.com/85741790/207326881-597cdefd-9e8b-4303-bf37-f8ffdbea0da9.png)
+![Serverless-OTP](https://user-images.githubusercontent.com/85741790/207429946-42dbf7f1-bc48-4dfe-ac6c-fb34a927ed9d.png)
 
 # Technologies Used
 
