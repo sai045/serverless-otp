@@ -23,9 +23,6 @@
 - This is NoSQL database. We are using TTL feature that deletes data after a set time which helps us reduce storage requirements.
 - This can be easily inegrated to AWS Lambda.
 
-## Amazon SES:
-- Simple email service is a service provided by Amazon that is used to send transactional emails. This uses SMTP.
-
 ## Amazon Cloudfront:
 - Used to monitor logs and solve bugs between AWS Lambda Triggers and DynamoDB Triggers
 
