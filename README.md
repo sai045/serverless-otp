@@ -25,3 +25,9 @@
 
 ## Amazon SES:
 - Simple email service is a service provided by Amazon that is used to send transactional emails. This uses SMTP.
+
+## Amazon Cloudfront:
+- Used to monitor logs and solve bugs between AWS Lambda Triggers and DynamoDB Triggers
+
+## SMTPLIB:
+- Used to send Emails to the users.
