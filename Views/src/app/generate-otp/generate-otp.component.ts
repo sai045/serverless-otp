@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-generate-otp',
   templateUrl: './generate-otp.component.html',
-  styleUrls: ['./generate-otp.component.css']
+  styleUrls: ['./generate-otp.component.css'],
 })
 export class GenerateOTPComponent {
-  email = ""
-  generateOTP(){
-    return this.email;
+  @Output() getMail = new EventEmitter<{ mailID: string }>();
+  email = '';
+  generateOTP() {
+    this.getMail.emit({ mailID: this.email });
+    console.log(this.email);
+  }
+  onUpdateEmail(event: Event) {
+    this.email = (<HTMLInputElement>event.target).value;
   }
 }

@@ -13,14 +13,10 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     GenerateOTPComponent,
-    VerifyOTPComponent
+    VerifyOTPComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
