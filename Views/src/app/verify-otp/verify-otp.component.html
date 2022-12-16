@@ -1,0 +1,41 @@
+<form class="container-sm verifyForm">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/blog045-ee770.appspot.com/o/Brand.PNG?alt=media&token=011c10ac-94c3-48d0-a958-8412ba614558"
+            alt=""
+            height="100px"
+          />
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">OTP</label>
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          [(ngModel)]="OTP"
+        />
+        <div id="emailHelp" class="form-text">
+          Check your email inbox for the OTP.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="verifyOTP()">
+        Submit
+      </button>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</form>
