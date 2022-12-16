@@ -1,7 +1,7 @@
 ﻿# Serverless-otp
  
  ## Plan of the project
-![Serverless-OTP](https://user-images.githubusercontent.com/85741790/207326881-597cdefd-9e8b-4303-bf37-f8ffdbea0da9.png)
+![Serverless-OTP (2)](https://user-images.githubusercontent.com/85741790/207430426-3b3d45de-59d1-491e-a015-31d19013c636.png)
 
 # Technologies Used
 
@@ -22,9 +22,6 @@
 ## DynamoDB:
 - This is NoSQL database. We are using TTL feature that deletes data after a set time which helps us reduce storage requirements.
 - This can be easily inegrated to AWS Lambda.
-
-## Amazon SES:
-- Simple email service is a service provided by Amazon that is used to send transactional emails. This uses SMTP.
 
 ## Amazon Cloudfront:
 - Used to monitor logs and solve bugs between AWS Lambda Triggers and DynamoDB Triggers
