@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AxiosService } from 'src/services/Axios.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,20 @@ export class AppComponent {
   title = 'OTP System';
   email = '';
   OTP = '';
+  pageName = 'generateOTP';
+
+  constructor(private axios: AxiosService) {}
 
   getEmail(generateData: { mailID: string }) {
-    this.email = generateData.mailID ;
-    console.log(generateData)
-  } 
-  getOTP(verifyData: { OTP:string }) {
-    this.OTP = verifyData.OTP ;
-    console.log(verifyData)
-  } 
+    this.email = generateData.mailID;
+    this.pageName = 'verifyOTP';
+  }
+  getOTP(verifyData: { OTP: string }) {
+    this.OTP = verifyData.OTP;
+    this.axios.verifyOtpCall(this.email, this.OTP)
+    if (localStorage.getItem('isVerified') == 'Verified')
+    {
+      this.pageName = 'home'
+    }
+  }
 }

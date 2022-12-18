@@ -1,3 +1,9 @@
-<!-- <app-home></app-home> -->
-<!-- <app-generate-otp (getMail)="getEmail($event)"></app-generate-otp> -->
-<app-verify-otp (getOtp)="getOTP($event)"></app-verify-otp>
+<app-home *ngIf="pageName === 'home'" [email]="email"></app-home>
+<app-generate-otp
+  (getMail)="getEmail($event)"
+  *ngIf="pageName === 'generateOTP'"
+></app-generate-otp>
+<app-verify-otp
+  (getOtp)="getOTP($event)"
+  *ngIf="pageName === 'verifyOTP'"
+></app-verify-otp>
