@@ -11,7 +11,13 @@ export class AxiosService {
         'https://yyd04osgpj.execute-api.ap-south-1.amazonaws.com/dev/generateotp?MailID=' +
           email
       )
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res.data)
+        if(res.data == 'User Already Verified')
+        {
+          localStorage.setItem('isVerified', 'Verified');
+        }
+      })
       .catch((err) => {
         console.log(err);
       });

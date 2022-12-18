@@ -12,18 +12,25 @@ export class AppComponent {
   OTP = '';
   pageName = 'generateOTP';
 
-  constructor(private axios: AxiosService) {}
+  constructor(private axios: AxiosService) {
+    window.onload = () => {
+      localStorage.removeItem('isVerified');
+    };
+  }
 
   getEmail(generateData: { mailID: string }) {
     this.email = generateData.mailID;
-    this.pageName = 'verifyOTP';
+    if (localStorage.getItem('isVerified') == 'Verified') {
+      this.pageName = 'home';
+    } else {
+      this.pageName = 'verifyOTP';
+    }
   }
   getOTP(verifyData: { OTP: string }) {
     this.OTP = verifyData.OTP;
-    this.axios.verifyOtpCall(this.email, this.OTP)
-    if (localStorage.getItem('isVerified') == 'Verified')
-    {
-      this.pageName = 'home'
+    this.axios.verifyOtpCall(this.email, this.OTP);
+    if (localStorage.getItem('isVerified') == 'Verified') {
+      this.pageName = 'home';
     }
   }
 }

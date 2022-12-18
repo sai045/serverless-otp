@@ -10,9 +10,9 @@ export class GenerateOTPComponent {
   @Output() getMail = new EventEmitter<{ mailID: string }>();
   email = '';
   constructor(private axios: AxiosService) {}
-  generateOTP() {
+  async generateOTP() {
+    await this.axios.generateOtpCall(this.email);
     this.getMail.emit({ mailID: this.email });
-    this.axios.generateOtpCall(this.email);
   }
   onUpdateEmail(event: Event) {
     this.email = (<HTMLInputElement>event.target).value;
