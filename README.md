@@ -1,5 +1,8 @@
 ﻿# Serverless-otp
  
+ ## Deploy Link
+ https://serverless-otp.vercel.app/
+ 
  ## Plan of the project
 ![Serverless-OTP (2)](https://user-images.githubusercontent.com/85741790/207430426-3b3d45de-59d1-491e-a015-31d19013c636.png)
 
