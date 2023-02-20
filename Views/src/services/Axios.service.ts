@@ -8,7 +8,7 @@ export class AxiosService {
   generateOtpCall(email: string) {
     return axios
       .get(
-        'https://yyd04osgpj.execute-api.ap-south-1.amazonaws.com/dev/generateotp?MailID=' +
+        'https://oulk6yk5f6.execute-api.ap-south-1.amazonaws.com/dev/generateotp?MailID=' +
           email
       )
       .then((res) => {
@@ -25,7 +25,7 @@ export class AxiosService {
   verifyOtpCall(email: string, OTP: string) {
     return axios
       .get(
-        'https://yyd04osgpj.execute-api.ap-south-1.amazonaws.com/dev//verifyotp?MailID=' +
+        'https://oulk6yk5f6.execute-api.ap-south-1.amazonaws.com/dev//verifyotp?MailID=' +
           email +
           '&OTPFromUser=' +
           OTP
